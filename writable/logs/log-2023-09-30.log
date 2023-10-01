@@ -1,0 +1,842 @@
+CRITICAL - 2023-09-30 09:36:57 --> Class "Config\App\Filters\AuthGuard" not found
+in SYSTEMPATH\Filters\Filters.php on line 173.
+ 1 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('register', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+CRITICAL - 2023-09-30 09:37:11 --> Class "Config\App\Filters\AuthGuard" not found
+in SYSTEMPATH\Filters\Filters.php on line 173.
+ 1 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('register', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+CRITICAL - 2023-09-30 09:57:10 --> Invalid file: "/register.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/register.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('/register', [], true)
+ 3 APPPATH\Controllers\UserController.php(34): view('/register', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+CRITICAL - 2023-09-30 10:21:41 --> Call to undefined function set_value()
+in APPPATH\Views\registration.php on line 33.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('registration', [], true)
+ 4 APPPATH\Controllers\UserController.php(11): view('registration')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+ERROR - 2023-09-30 10:32:16 --> mysqli_sql_exception: Table 'ecommerce.users' doesn't exist in C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\ShoeShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ShoeShop\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ShoeShop\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gm...', 'email', Array, NULL, 'username')
+#6 C:\laragon\www\ShoeShop\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gm...', Array, Array)
+#7 C:\laragon\www\ShoeShop\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ShoeShop\app\Controllers\UserController.php(22): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ShoeShop\system\CodeIgniter.php(919): App\Controllers\UserController->register()
+#10 C:\laragon\www\ShoeShop\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\ShoeShop\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ShoeShop\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ShoeShop\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-09-30 10:32:16 --> Table 'ecommerce.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gmail.com', 'email', [...], null, 'username')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(22): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+ERROR - 2023-09-30 10:33:27 --> mysqli_sql_exception: Table 'ecommerce.users' doesn't exist in C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\ShoeShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ShoeShop\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ShoeShop\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gm...', 'email', Array, NULL, 'username')
+#6 C:\laragon\www\ShoeShop\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gm...', Array, Array)
+#7 C:\laragon\www\ShoeShop\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ShoeShop\app\Controllers\UserController.php(22): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ShoeShop\system\CodeIgniter.php(919): App\Controllers\UserController->register()
+#10 C:\laragon\www\ShoeShop\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\ShoeShop\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ShoeShop\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ShoeShop\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-09-30 10:33:27 --> Table 'ecommerce.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gmail.com', 'email', [...], null, 'username')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(22): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+ERROR - 2023-09-30 11:45:26 --> mysqli_sql_exception: Table 'ecommerce.users' doesn't exist in C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\ShoeShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ShoeShop\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ShoeShop\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gm...', 'email', Array, NULL, 'username')
+#6 C:\laragon\www\ShoeShop\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gm...', Array, Array)
+#7 C:\laragon\www\ShoeShop\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ShoeShop\app\Controllers\UserController.php(22): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ShoeShop\system\CodeIgniter.php(919): App\Controllers\UserController->register()
+#10 C:\laragon\www\ShoeShop\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\ShoeShop\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ShoeShop\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ShoeShop\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-09-30 11:45:26 --> Table 'ecommerce.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gmail.com', 'email', [...], null, 'username')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(22): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+ERROR - 2023-09-30 11:47:37 --> mysqli_sql_exception: Table 'ecommerce.users' doesn't exist in C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\ShoeShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ShoeShop\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ShoeShop\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gm...', 'email', Array, NULL, 'username')
+#6 C:\laragon\www\ShoeShop\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gm...', Array, Array)
+#7 C:\laragon\www\ShoeShop\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ShoeShop\app\Controllers\UserController.php(22): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ShoeShop\system\CodeIgniter.php(919): App\Controllers\UserController->register()
+#10 C:\laragon\www\ShoeShop\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\ShoeShop\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ShoeShop\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ShoeShop\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-09-30 11:47:37 --> Table 'ecommerce.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gmail.com', 'email', [...], null, 'username')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(22): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+ERROR - 2023-09-30 11:49:20 --> mysqli_sql_exception: Table 'ecommerce.users' doesn't exist in C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\ShoeShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ShoeShop\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ShoeShop\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gm...', 'email', Array, NULL, 'username')
+#6 C:\laragon\www\ShoeShop\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gm...', Array, Array)
+#7 C:\laragon\www\ShoeShop\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ShoeShop\app\Controllers\UserController.php(22): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ShoeShop\system\CodeIgniter.php(919): App\Controllers\UserController->register()
+#10 C:\laragon\www\ShoeShop\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\ShoeShop\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ShoeShop\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ShoeShop\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-09-30 11:49:20 --> Table 'ecommerce.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gmail.com', 'email', [...], null, 'username')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(22): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+ERROR - 2023-09-30 11:50:37 --> mysqli_sql_exception: Table 'ecommerce.users' doesn't exist in C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\ShoeShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ShoeShop\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ShoeShop\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gm...', 'email', Array, NULL, 'username')
+#6 C:\laragon\www\ShoeShop\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gm...', Array, Array)
+#7 C:\laragon\www\ShoeShop\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ShoeShop\app\Controllers\UserController.php(22): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ShoeShop\system\CodeIgniter.php(919): App\Controllers\UserController->register()
+#10 C:\laragon\www\ShoeShop\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\ShoeShop\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ShoeShop\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ShoeShop\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-09-30 11:50:37 --> Table 'ecommerce.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gmail.com', 'email', [...], null, 'username')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(22): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+ERROR - 2023-09-30 11:51:29 --> mysqli_sql_exception: Table 'ecommerce.users' doesn't exist in C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\ShoeShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ShoeShop\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ShoeShop\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gm...', 'email', Array, NULL, 'username')
+#6 C:\laragon\www\ShoeShop\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gm...', Array, Array)
+#7 C:\laragon\www\ShoeShop\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ShoeShop\app\Controllers\UserController.php(22): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ShoeShop\system\CodeIgniter.php(919): App\Controllers\UserController->register()
+#10 C:\laragon\www\ShoeShop\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\ShoeShop\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ShoeShop\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ShoeShop\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-09-30 11:51:29 --> Table 'ecommerce.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gmail.com', 'email', [...], null, 'username')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(22): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+ERROR - 2023-09-30 11:52:42 --> mysqli_sql_exception: Table 'ecommerce.users' doesn't exist in C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\ShoeShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ShoeShop\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ShoeShop\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gm...', 'email', Array, NULL, 'username')
+#6 C:\laragon\www\ShoeShop\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gm...', Array, Array)
+#7 C:\laragon\www\ShoeShop\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ShoeShop\app\Controllers\UserController.php(22): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ShoeShop\system\CodeIgniter.php(919): App\Controllers\UserController->register()
+#10 C:\laragon\www\ShoeShop\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\ShoeShop\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ShoeShop\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ShoeShop\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-09-30 11:52:42 --> Table 'ecommerce.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gmail.com', 'email', [...], null, 'username')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(22): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+ERROR - 2023-09-30 11:52:58 --> mysqli_sql_exception: Table 'ecommerce.users' doesn't exist in C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\ShoeShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ShoeShop\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ShoeShop\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gm...', 'email', Array, NULL, 'username')
+#6 C:\laragon\www\ShoeShop\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gm...', Array, Array)
+#7 C:\laragon\www\ShoeShop\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ShoeShop\app\Controllers\UserController.php(22): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ShoeShop\system\CodeIgniter.php(919): App\Controllers\UserController->register()
+#10 C:\laragon\www\ShoeShop\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\ShoeShop\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ShoeShop\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ShoeShop\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-09-30 11:52:58 --> Table 'ecommerce.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gmail.com', 'email', [...], null, 'username')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(22): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+ERROR - 2023-09-30 11:53:08 --> mysqli_sql_exception: Table 'ecommerce.users' doesn't exist in C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\ShoeShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ShoeShop\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ShoeShop\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gm...', 'email', Array, NULL, 'username')
+#6 C:\laragon\www\ShoeShop\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gm...', Array, Array)
+#7 C:\laragon\www\ShoeShop\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ShoeShop\app\Controllers\UserController.php(22): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ShoeShop\system\CodeIgniter.php(919): App\Controllers\UserController->register()
+#10 C:\laragon\www\ShoeShop\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\ShoeShop\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ShoeShop\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ShoeShop\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-09-30 11:53:08 --> Table 'ecommerce.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gmail.com', 'email', [...], null, 'username')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(22): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+ERROR - 2023-09-30 11:53:48 --> mysqli_sql_exception: Table 'ecommerce.users' doesn't exist in C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\ShoeShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ShoeShop\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ShoeShop\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gm...', 'email', Array, NULL, 'username')
+#6 C:\laragon\www\ShoeShop\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gm...', Array, Array)
+#7 C:\laragon\www\ShoeShop\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ShoeShop\app\Controllers\UserController.php(22): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ShoeShop\system\CodeIgniter.php(919): App\Controllers\UserController->register()
+#10 C:\laragon\www\ShoeShop\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\ShoeShop\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ShoeShop\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ShoeShop\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-09-30 11:53:48 --> Table 'ecommerce.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gmail.com', 'email', [...], null, 'username')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(22): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+ERROR - 2023-09-30 11:54:31 --> mysqli_sql_exception: Table 'ecommerce.users' doesn't exist in C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\ShoeShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ShoeShop\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ShoeShop\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gm...', 'email', Array, NULL, 'username')
+#6 C:\laragon\www\ShoeShop\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gm...', Array, Array)
+#7 C:\laragon\www\ShoeShop\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ShoeShop\app\Controllers\UserController.php(22): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ShoeShop\system\CodeIgniter.php(919): App\Controllers\UserController->register()
+#10 C:\laragon\www\ShoeShop\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\ShoeShop\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ShoeShop\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ShoeShop\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-09-30 11:54:31 --> Table 'ecommerce.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gmail.com', 'email', [...], null, 'username')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(22): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+ERROR - 2023-09-30 11:54:46 --> mysqli_sql_exception: Table 'ecommerce.users' doesn't exist in C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\ShoeShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ShoeShop\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ShoeShop\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gm...', 'email', Array, NULL, 'username')
+#6 C:\laragon\www\ShoeShop\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gm...', Array, Array)
+#7 C:\laragon\www\ShoeShop\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ShoeShop\app\Controllers\UserController.php(22): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ShoeShop\system\CodeIgniter.php(919): App\Controllers\UserController->register()
+#10 C:\laragon\www\ShoeShop\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\ShoeShop\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ShoeShop\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ShoeShop\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-09-30 11:54:46 --> Table 'ecommerce.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gmail.com', 'email', [...], null, 'username')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(22): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+ERROR - 2023-09-30 11:56:24 --> mysqli_sql_exception: Table 'ecommerce.users' doesn't exist in C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\ShoeShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ShoeShop\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ShoeShop\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gm...', 'email', Array, NULL, 'username')
+#6 C:\laragon\www\ShoeShop\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gm...', Array, Array)
+#7 C:\laragon\www\ShoeShop\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ShoeShop\app\Controllers\UserController.php(22): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ShoeShop\system\CodeIgniter.php(919): App\Controllers\UserController->register()
+#10 C:\laragon\www\ShoeShop\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\ShoeShop\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ShoeShop\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ShoeShop\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-09-30 11:56:24 --> Table 'ecommerce.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gmail.com', 'email', [...], null, 'username')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(22): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+ERROR - 2023-09-30 11:56:42 --> mysqli_sql_exception: Table 'ecommerce.users' doesn't exist in C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\ShoeShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ShoeShop\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ShoeShop\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gm...', 'email', Array, NULL, 'username')
+#6 C:\laragon\www\ShoeShop\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gm...', Array, Array)
+#7 C:\laragon\www\ShoeShop\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ShoeShop\app\Controllers\UserController.php(22): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ShoeShop\system\CodeIgniter.php(919): App\Controllers\UserController->register()
+#10 C:\laragon\www\ShoeShop\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\ShoeShop\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ShoeShop\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ShoeShop\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-09-30 11:56:42 --> Table 'ecommerce.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gmail.com', 'email', [...], null, 'username')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(22): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+ERROR - 2023-09-30 11:58:30 --> mysqli_sql_exception: Table 'ecommerce.users' doesn't exist in C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\ShoeShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ShoeShop\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ShoeShop\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gm...', 'email', Array, NULL, 'username')
+#6 C:\laragon\www\ShoeShop\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gm...', Array, Array)
+#7 C:\laragon\www\ShoeShop\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ShoeShop\app\Controllers\UserController.php(26): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ShoeShop\system\CodeIgniter.php(919): App\Controllers\UserController->register()
+#10 C:\laragon\www\ShoeShop\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\ShoeShop\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ShoeShop\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ShoeShop\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-09-30 11:58:30 --> Table 'ecommerce.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gmail.com', 'email', [...], null, 'username')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(26): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+ERROR - 2023-09-30 11:58:38 --> mysqli_sql_exception: Table 'ecommerce.users' doesn't exist in C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\ShoeShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ShoeShop\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ShoeShop\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gm...', 'email', Array, NULL, 'username')
+#6 C:\laragon\www\ShoeShop\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gm...', Array, Array)
+#7 C:\laragon\www\ShoeShop\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ShoeShop\app\Controllers\UserController.php(26): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ShoeShop\system\CodeIgniter.php(919): App\Controllers\UserController->register()
+#10 C:\laragon\www\ShoeShop\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\ShoeShop\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ShoeShop\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ShoeShop\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-09-30 11:58:38 --> Table 'ecommerce.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gmail.com', 'email', [...], null, 'username')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(26): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+ERROR - 2023-09-30 11:59:01 --> mysqli_sql_exception: Table 'ecommerce.users' doesn't exist in C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\ShoeShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ShoeShop\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ShoeShop\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gm...', 'email', Array, NULL, 'username')
+#6 C:\laragon\www\ShoeShop\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gm...', Array, Array)
+#7 C:\laragon\www\ShoeShop\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ShoeShop\app\Controllers\UserController.php(26): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ShoeShop\system\CodeIgniter.php(919): App\Controllers\UserController->register()
+#10 C:\laragon\www\ShoeShop\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\ShoeShop\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ShoeShop\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ShoeShop\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-09-30 11:59:01 --> Table 'ecommerce.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gmail.com', 'email', [...], null, 'username')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(26): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+ERROR - 2023-09-30 12:00:55 --> mysqli_sql_exception: Table 'ecommerce.users' doesn't exist in C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\ShoeShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ShoeShop\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ShoeShop\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gm...', 'email', Array, NULL, 'username')
+#6 C:\laragon\www\ShoeShop\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gm...', Array, Array)
+#7 C:\laragon\www\ShoeShop\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ShoeShop\app\Controllers\UserController.php(26): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ShoeShop\system\CodeIgniter.php(919): App\Controllers\UserController->register()
+#10 C:\laragon\www\ShoeShop\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\ShoeShop\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ShoeShop\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ShoeShop\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-09-30 12:00:55 --> Table 'ecommerce.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('ashlyomanada@gmail.com', 'email', [...], null, 'username')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'ashlyomanada@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(26): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+CRITICAL - 2023-09-30 12:02:08 --> Undefined variable $userModel
+in APPPATH\Controllers\UserController.php on line 32.
+ 1 APPPATH\Controllers\UserController.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userModel', 'C:\\laragon\\www\\ShoeShop\\app\\Controllers\\UserController.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+CRITICAL - 2023-09-30 12:02:59 --> Class "App\Controllers\UserModel" not found
+in APPPATH\Controllers\UserController.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+CRITICAL - 2023-09-30 12:03:40 --> Class "App\Controllers\UserModel" not found
+in APPPATH\Controllers\UserController.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+CRITICAL - 2023-09-30 12:04:42 --> Class "App\Controllers\UserModel" not found
+in APPPATH\Controllers\UserController.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+CRITICAL - 2023-09-30 12:05:27 --> Class "App\Controllers\App\Models\UserModel" not found
+in APPPATH\Controllers\UserController.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+CRITICAL - 2023-09-30 12:05:52 --> Call to undefined method App\Controllers\UserController::save()
+in APPPATH\Controllers\UserController.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+CRITICAL - 2023-09-30 12:06:17 --> Class "App\Controllers\UserModel" not found
+in APPPATH\Controllers\UserController.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+CRITICAL - 2023-09-30 12:19:56 --> Class "Config\App\Filters\AuthGuard" not found
+in SYSTEMPATH\Filters\Filters.php on line 173.
+ 1 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('loginAuth', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+ERROR - 2023-09-30 12:20:27 --> mysqli_sql_exception: Unknown column 'username' in 'where clause' in C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\ShoeShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\ShoeShop\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\ShoeShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\ShoeShop\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ShoeShop\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\ShoeShop\app\Controllers\UserController.php(49): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\ShoeShop\system\CodeIgniter.php(919): App\Controllers\UserController->loginAuth()
+#8 C:\laragon\www\ShoeShop\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\laragon\www\ShoeShop\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\ShoeShop\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\ShoeShop\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-09-30 12:20:27 --> Unknown column 'username' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_useracct`
+WHERE `username` IS NULL
+ LIMIT 1', [], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\UserController.php(49): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->loginAuth()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+CRITICAL - 2023-09-30 12:21:02 --> Class "Config\App\Filters\AuthGuard" not found
+in SYSTEMPATH\Filters\Filters.php on line 173.
+ 1 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('login', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+CRITICAL - 2023-09-30 12:27:26 --> Undefined variable $authenticatePassword
+in APPPATH\Controllers\UserController.php on line 54.
+ 1 APPPATH\Controllers\UserController.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $authenticatePassword', 'C:\\laragon\\www\\ShoeShop\\app\\Controllers\\UserController.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->loginAuth()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+CRITICAL - 2023-09-30 12:32:26 --> Class "Config\App\Filters\AuthGuard" not found
+in SYSTEMPATH\Filters\Filters.php on line 173.
+ 1 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('loginAuth', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+CRITICAL - 2023-09-30 12:36:12 --> syntax error, unexpected token "}", expecting ";"
+in APPPATH\Controllers\UserController.php on line 62.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\ShoeShop\\app\\Controllers\\UserController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\UserController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\UserController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\UserController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+CRITICAL - 2023-09-30 12:38:24 --> Undefined variable $newName
+in APPPATH\Views\include\banner.php on line 9.
+ 1 APPPATH\Views\include\banner.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $newName', 'C:\\laragon\\www\\ShoeShop\\app\\Views\\include\\banner.php', 9)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\ShoeShop\\app\\Views\\include\\banner.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('include/banner', null, true)
+ 5 APPPATH\Views\index.php(5): CodeIgniter\View\View->include('include/banner')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\ShoeShop\\app\\Views\\index.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('index', [], true)
+ 9 APPPATH\Controllers\UserController.php(74): view('index')
+10 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->website()
+11 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+12 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+CRITICAL - 2023-09-30 12:38:50 --> Undefined property: App\Controllers\UserController::$product
+in APPPATH\Controllers\UserController.php on line 74.
+ 1 APPPATH\Controllers\UserController.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\UserController::$product', 'C:\\laragon\\www\\ShoeShop\\app\\Controllers\\UserController.php', 74)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->website()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+CRITICAL - 2023-09-30 12:46:24 --> Class "Config\App\Filters\AuthGuard" not found
+in SYSTEMPATH\Filters\Filters.php on line 173.
+ 1 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('loginAuth', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+CRITICAL - 2023-09-30 13:17:24 --> syntax error, unexpected token "=>"
+in APPPATH\Config\Routes.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(787): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+CRITICAL - 2023-09-30 13:17:28 --> syntax error, unexpected token "=>"
+in APPPATH\Config\Routes.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(787): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+CRITICAL - 2023-09-30 13:17:49 --> Call to undefined method CodeIgniter\Router\RouteCollection::mat()
+in APPPATH\Config\Routes.php on line 21.
+ 1 SYSTEMPATH\Router\RouteCollection.php(339): require()
+ 2 SYSTEMPATH\CodeIgniter.php(787): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 3 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+CRITICAL - 2023-09-30 13:17:52 --> Call to undefined method CodeIgniter\Router\RouteCollection::mat()
+in APPPATH\Config\Routes.php on line 21.
+ 1 SYSTEMPATH\Router\RouteCollection.php(339): require()
+ 2 SYSTEMPATH\CodeIgniter.php(787): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 3 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
+CRITICAL - 2023-09-30 13:55:47 --> Class "App\Controllers\UserModel" not found
+in APPPATH\Controllers\AdminController.php on line 90.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminController->loginAuth()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ShoeShop\\public\\index.php')
